@@ -1,0 +1,202 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;   /* FIX horizontal scroll */
+  overflow-y: auto;     /* FIX vertical crash in Vercel */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;     /* FIX (DO NOT hide fully in production) */
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;    /* FIX instead of strict 100vh */
+  margin: 0;
+  padding: 0;
+  background-image: url("/main.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+  .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        color: white !important;
+        transition: transform 0.3s ease;
+      }
+      
+      .navbar-brand:hover {
+        transform: scale(1.05);
+      }
+      .search-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      
+      .search-input {
+        border-radius: 25px !important;
+        padding: 12px 45px 12px 20px;
+        border: 2px solid transparent !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+      .search-btn {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50% !important;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
+        border: none !important;
+        transition: all 0.3s ease;
+      }
+      
+      .search-btn:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 0 15px rgba(58, 134, 255, 0.5);
+      }
+      .theme-toggle {
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        color: white;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      @media (max-width: 768px) {
+        .navbar-brand {
+          font-size: 1.4em;
+        }
+        
+        .search-container {
+          max-width: 100%;
+          margin: 10px 0;
+        }
+        
+        .nav-actions {
+          justify-content: center;
+          margin-top: 10px;
+          width: 100%;
+        }
+      }
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+      
+      .dark-mode .weather-nav {
+        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      }
+     h1 {
+        color: aliceblue;
+        margin: 7% 5%;
+        font-size: 6em;
+        position: fixed;
+        max-width: 100%;
+      }
+      sup{
+        position: fixed;
+        top: 26%;
+        font-size: 30px;
+      }
+      h2{
+        font-size: 3em;
+        color: #e4e4e4;
+        text-align: right;
+        margin-right: 5px;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+      }
+    
+  .forecast-container {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  bottom: 25%;
+  left: 6%;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: auto;  /* KEEP SAFE */
+  overflow-y: hidden; /* FIX vertical scroll bug */
+}
+.forecast-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  height: 30vh;
+  width: 250px;
+  font-size: 1.6em;
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+  overflow-wrap: break-word;
+  box-sizing: border-box; /* FIX overflow issue */
+}
+.forecast-card:hover {
+  transform: translateY(5px); /* Example effect */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  font-size: 1.7em;
+}
+pre{
+    color: white;
+    margin-left: 18%;
+    margin-top: 2%;
+    font-size: 1.4em;
+    color: rgb(25, 0, 29);
+    font-weight: 600;
+}
+.date-condition {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  text-align: right;
+  color: white;
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+footer {
+  font-size: 20px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+}
+b{
+  font-size: 20px;
+  position: fixed;
+  top: 97%;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  sup {
+    position: fixed;
+    top: 26%;
+    font-size: 20px;
+  }
+}
