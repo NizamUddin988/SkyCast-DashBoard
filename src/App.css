@@ -200,3 +200,119 @@ b{
     font-size: 20px;
   }
 }
+/* =============================================
+   MOBILE RESPONSIVE — WEATHER APP
+   ============================================= */
+
+@media (max-width: 768px) {
+
+  /* Root background */
+  #root {
+    background-size: cover !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Temperature heading */
+  h1 {
+    position: static !important;
+    font-size: 3.5em !important;
+    margin: 80px 5% 0 5% !important;
+    text-align: left !important;
+  }
+
+  sup {
+    position: static !important;
+    font-size: 18px !important;
+    vertical-align: super !important;
+  }
+
+  /* City name */
+  h2 {
+    font-size: 1.8em !important;
+    text-align: left !important;
+    margin: 0 5% !important;
+  }
+
+  /* Weather stats */
+  pre {
+    margin-left: 5% !important;
+    margin-top: 1% !important;
+    font-size: 1em !important;
+  }
+
+  /* Date & condition */
+  .date-condition {
+    position: static !important;
+    text-align: left !important;
+    margin: 0.5rem 5% !important;
+    font-size: 1em !important;
+    color: white !important;
+  }
+
+  /* Forecast cards */
+  .forecast-container {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 10px !important;
+    padding: 10px 5% !important;
+    margin-top: 1rem !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+
+  .forecast-card {
+    min-width: 130px !important;
+    width: 130px !important;
+    height: auto !important;
+    font-size: 1em !important;
+    padding: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .forecast-card:hover {
+    transform: none !important;
+    font-size: 1em !important;
+  }
+
+  /* Cloud icon */
+  .bi-cloud-sun-fill {
+    display: none !important;
+  }
+
+  /* Footer */
+  footer {
+    position: static !important;
+    transform: none !important;
+    text-align: center !important;
+    padding: 1rem 0 !important;
+    left: auto !important;
+  }
+
+  b {
+    position: static !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  /* Navbar search */
+  .search-container {
+    max-width: 100% !important;
+    margin: 8px 0 !important;
+  }
+
+  .search-input {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.8em !important; margin-top: 75px !important; }
+  h2 { font-size: 1.4em !important; }
+  pre { font-size: 0.85em !important; }
+  .forecast-card { min-width: 110px !important; width: 110px !important; font-size: 0.85em !important; }
+  .date-condition { font-size: 0.85em !important; }
+}
