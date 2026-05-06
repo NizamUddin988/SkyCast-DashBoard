@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}=${city}&hours=6`)
+      .get(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&hours=6`)
       .then((res) => setData(res.data))
       .catch((err) => console.error(err))
   }, [city])
