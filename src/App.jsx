@@ -84,7 +84,7 @@ function App() {
         </div>
       )}
 
-      <footer>@Weather 2025</footer>
+      <footer>@Weather 2026</footer>
     </div>
   )
 }
